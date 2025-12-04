@@ -2,116 +2,44 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <!-- 适配移动端 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>无题</title>
+    <title>简单的诗词首页</title>
     <style>
-        /* --- 基础设定 --- */
-        :root {
-            --bg-color: #fdfbf7; /* 米白色，类似宣纸 */
-            --text-color: #2c2c2c; /* 深炭灰，非纯黑，更柔和 */
-            --accent-color: #a83f3f; /* 印章红，作为点缀 */
-        }
-
+        /* 基础样式，让页面更美观 */
         body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            /* 关键：使用衬线体 (宋体/明朝体) 营造文学感 */
-            font-family: "Noto Serif SC", "Songti SC", "SimSun", "Times New Roman", serif;
-            overflow: hidden;
+            font-family: "微软雅黑", SimHei, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
         }
-
-        /* --- 容器 --- */
-        .container {
-            max-width: 600px;
-            padding: 2rem;
+        .title {
             text-align: center;
-            /* 入场动画 */
-            animation: fadeIn 2s ease-out forwards;
-            opacity: 0;
+            color: #2c3e50;
         }
-
-        /* --- 标题 --- */
-        h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            letter-spacing: 0.2em;
-        }
-
-        /* --- 诗歌正文 --- */
-        .poem-content {
-            font-size: 1.2rem;
-            line-height: 2.2; /* 较大的行高，增加呼吸感 */
-            margin-bottom: 3rem;
-            white-space: pre-line; /* 允许在代码中直接换行 */
-        }
-
-        /* --- 落款 --- */
-        .footer {
-            font-size: 0.9rem;
-            color: #888;
-            font-style: italic;
-            position: relative;
-            display: inline-block;
-        }
-
-        /* 模拟一个小红印章 */
-        .footer::after {
-            content: ' ';
-            display: block;
-            width: 16px;
-            height: 16px;
-            background-color: var(--accent-color);
-            border-radius: 4px;
-            position: absolute;
-            right: -25px;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.8;
-            box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        }
-
-        /* --- 动画定义 --- */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* --- 移动端适配 --- */
-        @media (max-width: 480px) {
-            h1 { font-size: 1.5rem; }
-            .poem-content { font-size: 1rem; }
+        .poem {
+            margin-top: 30px;
+            font-size: 18px;
+            text-align: center;
+            white-space: pre-line; /* 保留换行 */
         }
     </style>
 </head>
 <body>
+    <h1 class="title">生活偶记</h1>
+    <p style="text-align: center;">平凡日子里，藏着温柔与诗意</p>
+    
+    <div class="poem">
+        山居秋暝
+        【唐】王维
 
-    <div class="container">
-        <h1>面朝大海，春暖花开</h1>
-
-        <div class="poem-content">
-            从明天起，做一个幸福的人
-            喂马，劈柴，周游世界
-            从明天起，关心粮食和蔬菜
-            我有一所房子，面朝大海，春暖花开
-        </div>
-
-        <div class="footer">
-            海子 · 1989
-        </div>
+        空山新雨后，天气晚来秋。
+        明月松间照，清泉石上流。
+        竹喧归浣女，莲动下渔舟。
+        随意春芳歇，王孙自可留。
     </div>
-
 </body>
 </html>
